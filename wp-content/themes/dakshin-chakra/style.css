@@ -1,0 +1,62 @@
+/*
+Theme Name: Dakshin Chakra
+Theme URI: https://dakshinchakra.com
+Author: Dakshin Chakra
+Description: Block theme for Bangalore e-waste and scrap collection services.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 6.6
+Requires PHP: 7.4
+Text Domain: dakshin-chakra
+*/
+
+:root {
+  --dc-bg: #f7f5ee;
+  --dc-surface: #ffffff;
+  --dc-sage: #e5efe6;
+  --dc-green: #1f6b45;
+  --dc-green-dark: #154a30;
+  --dc-text: #20261f;
+  --dc-muted: #5a6459;
+  --dc-border: #d8dfd6;
+  --dc-wa: #25d366;
+  --dc-radius: 16px;
+}
+
+body { background: var(--dc-bg); color: var(--dc-text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+a { color: var(--dc-green); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--dc-green); outline-offset: 2px; }
+
+.site-main { padding-bottom: 7rem; }
+
+.dc-site-header { position: sticky; top: 0; z-index: 20; background: rgba(247,245,238,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--dc-border); }
+.dc-header-wrap { max-width: 1200px; margin: 0 auto; padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.dc-brand { font-size: 1.3rem; font-weight: 700; text-decoration: none; color: var(--dc-green-dark); }
+
+.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close { color: var(--dc-green-dark); }
+
+.dc-card, .wp-block-group.is-style-dc-card { background: var(--dc-surface); border: 1px solid var(--dc-border); border-radius: var(--dc-radius); box-shadow: 0 10px 30px rgba(20,40,20,.05); }
+.dc-placeholder { min-height: 220px; background: linear-gradient(150deg,#ecf5ed,#dcebdc); border: 1px dashed #8cad91; border-radius: var(--dc-radius); padding: 1.5rem; display:flex; align-items:center; justify-content:center; text-align:center; color:#365941; }
+
+.wp-block-button__link { border-radius: 999px; }
+.wp-block-button.is-style-outline .wp-block-button__link { border: 1.5px solid var(--dc-green); color: var(--dc-green); }
+
+.dc-footer { background: #173b27; color: #ecf4ed; padding: 3rem 1.2rem 6rem; }
+.dc-footer a { color: #d7f2de; text-decoration: none; }
+.dc-footer-grid { max-width: 1200px; margin: 0 auto; display:grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1.2rem; }
+
+.dc-whatsapp-float {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 30; display:inline-flex; align-items:center; gap:.45rem;
+  background: var(--dc-wa); color:#073e1d; font-weight:700; text-decoration:none; padding:.72rem .95rem; border-radius:999px;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.dc-whatsapp-float svg { width: 20px; height:20px; fill: currentColor; }
+
+@media (max-width: 900px){ .dc-footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px){
+  h1 { font-size: clamp(1.7rem, 6vw, 2.2rem)!important; }
+  .dc-whatsapp-float span { display:none; }
+  .dc-whatsapp-float { width: 52px; height:52px; justify-content:center; padding:0; }
+  .dc-footer-grid { grid-template-columns: 1fr; }
+}
