@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "palette": [
+        {"slug":"base","name":"Base","color":"#f7f5ee"},
+        {"slug":"surface","name":"Surface","color":"#ffffff"},
+        {"slug":"primary","name":"Primary","color":"#1f6b45"},
+        {"slug":"sage","name":"Sage","color":"#e5efe6"}
+      ]
+    },
+    "typography": {"fluid": true}
+  },
+  "styles": {
+    "color": {"background":"#f7f5ee","text":"#20261f"},
+    "elements": {"button": {"color": {"background": "#1f6b45", "text": "#ffffff"}}}
+  }
+}
